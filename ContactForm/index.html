@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactForm - Cadastro</title>
+    <link rel="shortcut icon" href="./IMAGES/download (11).jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>  
+    <header class="header">
+        <div class="container container--flex-column">
+          <article class="imagens-titulo">
+             <img class="header__imagens" src="./IMAGES/icons8-jerry-512 1.svg" alt="icone do site">
+             <img class="header__imagens" src="./IMAGES/Vector.svg" alt="icone do site">
+          </article>   
+        <h1 class="header__title">Contact Form</h1>
+        <p class="header__text">Insira os dados do contato e clique em cadastrar!</p>      
+        </div>
+        
+        <main>
+            <div class="container">
+                <form class="contact-form" action="">
+
+                    <div class="contact-form__linha">
+                        <div class="contact-form__col-a">
+                            <label class="contact-form__label" for="nome">Nome</label>
+                        </div>
+                        <div class="contact-form__col-b">
+                            <input class="contact-form__input contact-form__input--metade" 
+                            name="nome" 
+                            id="nome" 
+                            type="text"
+                            placeholder="Nome"
+                            >
+                            <input class="contact-form__input contact-form__input--metade" 
+                            name="sobrenome" 
+                            id="sobrenome" 
+                            type="text"
+                            placeholder="Sobrenome"
+                            >
+                        </div>
+                    </div>
+                    <div class="contact-form__linha">
+                        <div class="contact-form__col-a">
+                            <label class="contact-form__label" for="Email">Email</label>
+                        </div>
+                        <div class="contact-form__col-b">
+                            <input class="contact-form__input contact-form__input--grande" 
+                            name="Email" 
+                            id="email" 
+                            type="email"
+                            placeholder="E-mail"
+                            >
+                        </div>
+                   </div>
+                   <div class="contact-form__linha">
+                        <div class="contact-form__col-a">
+                            <label class="contact-form__label" for="Telefone">Telefone</label>
+                        </div>
+                        <div class="contact-form__col-b">
+                            <input class="contact-form__input contact-form__input--pequeno" 
+                            name="estado" 
+                            id="estado" 
+                            type="number"
+                            placeholder="+55"
+                            >
+                            <input class="contact-form__input contact-form__input--pequeno" 
+                            name="ddd" 
+                            id="ddd" 
+                            type="number"
+                            placeholder="ddd"
+                            >
+                            <input class="contact-form__input contact-form__input--pequeno" 
+                            name="Telefone" 
+                            id="telefone" 
+                            type="number"
+                            placeholder="ex: 99999-9999"
+                            >
+                        </div>
+                   </div>
+                    <div class="contact-form__linha">
+                        <div class="contact-form__col-a">
+                            <label class="contact-form__label" for="Telefone"></label>
+                        </div>
+                        <div class="contact-form__col-b">
+                            <input class="contact-form__input contact-form__input--pequenoDemais" 
+                            name="cep" 
+                            id="cep" 
+                            type="number"
+                            placeholder="CEP"
+                            >
+                            <input class="contact-form__input contact-form__input--metade" 
+                            name="rua" 
+                            id="rua" 
+                            type="text"
+                            placeholder="Rua lá de lá"
+                            >
+                            <input class="contact-form__input contact-form__input--pequenoDemais" 
+                            name="numero da casa" 
+                            id="NDC" 
+                            type="number"
+                            placeholder="ex: 555"
+                            >
+                        </div>
+                   </div>
+                   <div class="contact-form__linha">
+                        <div class="contact-form__col-a">
+                            <label class="contact-form__label" for="Telefone"></label>
+                        </div>
+                        <div class="contact-form__col-b">
+                            <input class="contact-form__input contact-form__input--pequenoDemais" 
+                            name="estado" 
+                            id="estado" 
+                            type="text"
+                            placeholder="Estado"
+                            >
+                        </div>
+                   </div>
+                </form>
+            </div>
+        </main>
+</body> 
+</html>
+

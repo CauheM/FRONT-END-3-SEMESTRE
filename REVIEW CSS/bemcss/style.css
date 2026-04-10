@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(26, 26, 26);
 }
 
 .menu{
@@ -19,10 +19,10 @@ body{
 }
 
 .menu__item{
-    color: black;
+    color: rgb(26, 26, 26);
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
-    transition: color 0.5s;
+    transition: color 0.3s;
     font-weight: 600;
 }
 
@@ -44,7 +44,6 @@ body{
 }
 
 .card-perfil{
-
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,165 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right bottom, #5c4721, #81590e, #ce8704);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/*Desktop*/
+
+.header{
+ padding: 10px, 0;   
+ /*border: 1px solid black;*/
+}
+
+.container{
+    width: 100%;   
+
+    margin: 0 auto;
+    gap: 5px;
+   /* border: 1px solid black;*/
+
+}
+
+.header__title{
+    font-family: cursive;
+    color: #DED27C;
+}
+
+.header__text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000000;
+}
+
+
+.container--flex-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagens-titulo{
+    display: flex;
+    gap: 10px;
+}
+
+.header__imagens{
+    height: 50px;
+    width: 50px;
+}
+
+.contact-form{
+    padding: 20px 0;
+    /*border: 1px solid #0000;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__linha{
+    display: flex;
+
+    
+}
+
+.contact-form__col-a, .contact-form__col-b{
+    display: flex;
+    flex-direction: column;
+   /*border: 1px solid #0000;*/
+}
+
+.contact-form__col-a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact-form__col-b{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 90%;
+}
+
+.contact-form__label{
+    color: #DED27C;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+
+.contact-form__input{
+    padding: 5px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: large;
+    outline: none;
+    margin-bottom: 30px;
+
+    transition: 0.3s;
+}
+
+.contact-form__input:focus{
+    border: 2px solid #e6e6e6;
+    background-color: #000000;
+    color: #DED27C;
+}
+
+/*modificadores*/
+.contact-form__input--metade{
+    width: 48%;
+    height: 35px;
+}
+
+.contact-form__input--grande{
+    width: 97.8%;
+    height: 35px;
+}
+
+.contact-form__input--grandao{
+    width: 97.8%;
+    height: 200px;
+}
+
+.contact-form__input--pequeno{
+    width: 31.4%;
+    height: 35px;
+}
+.contact-form__input--pequenoDemais{
+    width: 23.1%;
+    height: 35px;
+}
+
+
+/*Tablet*/
+@media screen and (max-width: 991px) {
+
+.container{
+    display: flex;
+    text-align: center;
+}
+
+}
+
+/*celular*/
+@media screen and (max-width: 767px) {
+
+.container{
+    display: flex;
+    text-align: center;
+}
+
+}
