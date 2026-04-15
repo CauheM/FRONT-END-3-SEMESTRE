@@ -203,4 +203,13 @@ body {
      display: flex;
      justify-content: center;
     }
+
+    .contact-form__input--metade,
+    .contact-form__input--tamanho,
+    .contact-form__input--tamanho3,
+    .contact-form__input--tres-metades,
+    .contact-form__input--metade2,
+    .contact-form__input--tres-metades2{
+        width: 100%;
+    }
 }
