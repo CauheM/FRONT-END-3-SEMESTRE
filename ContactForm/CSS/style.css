@@ -210,14 +210,15 @@ body {
     .contact-form__col-a{
         display: none;
     }
+    
     .contact-form__linha
     {
-     display: flex;
-     justify-content: center;
+       display: flex;
+       justify-content: center;
     }   
 
     .contact-form__col-b{
-        display: block;
+        flex-wrap: wrap;
     }
 
     .contact-form__input--metade,
