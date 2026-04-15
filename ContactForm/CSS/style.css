@@ -234,7 +234,7 @@ body {
     .contact-button{
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 15px;     
     }
 
     .contact-button__cadastro, .contact-button__Limpar{
