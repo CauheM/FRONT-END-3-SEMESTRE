@@ -58,7 +58,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: 10px;
-    
 }
 
 .contact-form__col-b {
@@ -78,6 +77,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-weight: 600;
+    
 }
 
 .contact-form__input{
@@ -85,6 +85,7 @@ body {
     border-radius: 10px;
     outline: none;
     padding: 5px 10px;
+    font-size: 12px;
     color: #6d641d;
     transition: background-color 0.5s, color 0.5s, border 0.5s;
     margin-top: 15px;
@@ -110,28 +111,12 @@ body {
     background-color: transparent;
     border: #ffe100 solid 1px;
     border-radius: 10px;
+    font-size: 10px;
 
     transition: background-color 0.5s;
 }
 
 .contact-button__cadastro:hover{
-  border: 1px solid white;
-    color: rgb(0, 0, 0);
-    background-color: #ffe100;
-}
-
-.contact-button__entrar{
-    width: 400px;
-    height: 45px;
-    color: #dfc500;
-    background-color: transparent;
-    border: #dfc500 solid 1px;
-    border-radius: 10px;
-
-    transition: background-color 0.5s;
-}
-
-.contact-button__entrar:hover{
   border: 1px solid white;
     color: rgb(0, 0, 0);
     background-color: #ffe100;
@@ -144,6 +129,7 @@ body {
     background-color: transparent;
     border: #ff0000 solid 1px;
     border-radius: 10px;
+    font-size: 10px;
 
     transition: background-color 0.5s;
 }
@@ -188,9 +174,30 @@ body {
 
 /*Tablet BreakPoint*/
 @media screen and (max-width: 991px) {
+    .container{
+        max-width: 750px;
+    }
+
+    .contact-form__col-a{
+     width: 15%;
+
+    }
+
     .header__title, .header__text{
      text-align: center;
     }
+
+    .header__title{
+        font-size: 45px;
+    }
+
+    .header__text{
+        font-size: 15px;
+    }
+
+    .header__imagens {
+    width: 150px;
+}
 }
 
 /*Mobile BreakPoint*/
@@ -202,6 +209,10 @@ body {
     {
      display: flex;
      justify-content: center;
+    }   
+
+    .contact-form__col-b{
+        display: block;
     }
 
     .contact-form__input--metade,
@@ -209,7 +220,10 @@ body {
     .contact-form__input--tamanho3,
     .contact-form__input--tres-metades,
     .contact-form__input--metade2,
-    .contact-form__input--tres-metades2{
+    .contact-form__input--tres-metades2
+    {
         width: 100%;
     }
+
+    
 }
