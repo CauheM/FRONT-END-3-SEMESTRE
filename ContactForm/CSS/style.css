@@ -110,6 +110,14 @@ body {
     background-color: transparent;
     border: #ffe100 solid 1px;
     border-radius: 10px;
+
+    transition: background-color 0.5s;
+}
+
+.contact-button__cadastro:hover{
+  border: 1px solid white;
+    color: rgb(0, 0, 0);
+    background-color: #ffe100;
 }
 
 .contact-button__entrar{
@@ -119,6 +127,31 @@ body {
     background-color: transparent;
     border: #dfc500 solid 1px;
     border-radius: 10px;
+
+    transition: background-color 0.5s;
+}
+
+.contact-button__entrar:hover{
+  border: 1px solid white;
+    color: rgb(0, 0, 0);
+    background-color: #ffe100;
+}
+
+.contact-button__Limpar{
+    width: 400px;
+    height: 45px;
+    color: #000000;
+    background-color: transparent;
+    border: #ff0000 solid 1px;
+    border-radius: 10px;
+
+    transition: background-color 0.5s;
+}
+
+.contact-button__Limpar:hover{
+  border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    background-color: #000000;
 }
 
 /*modificações*/
