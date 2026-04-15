@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color:#81590e;
     background-image: linear-gradient(to right bottom, #5c4721, #81590e, #ce8704);
     background-repeat: no-repeat;
     width: 100vw;
@@ -196,8 +197,12 @@ body {
     }
 
     .header__imagens {
-    width: 150px;
-}
+    width: 140px;
+    }
+
+    .contact-button__cadastro, .contact-button__Limpar{
+        width: 300px;
+    }
 }
 
 /*Mobile BreakPoint*/
@@ -225,5 +230,14 @@ body {
         width: 100%;
     }
 
+    .contact-button{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-button__cadastro, .contact-button__Limpar{
+        width: 80%;
+    }
     
 }
