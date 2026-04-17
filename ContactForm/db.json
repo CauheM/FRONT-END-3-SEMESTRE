@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "nome": "Catatau",
+      "sobrenome": "Somera",
+      "id": "CUs7po4iA8w"
+    },
+    {
+      "nome": "cauhe",
+      "sobrenome": "matheus",
+      "id": "SZ-nOXRqOW4"
+    }
+  ],
+  "Mercado": [
+    {
+      "id": "1",
+      "nome": "abacaxi",
+      "preco": 4,
+      "quantidade": 23
+    },
+    {
+      "nome": "maçã",
+      "preco": 1.5,
+      "quantidade": 67,
+      "id": "ZC3tAHGkUbg"
+    },
+    {
+      "nome": "Barney",
+      "preco": 2.5,
+      "quantidade": 1.5,
+      "id": "8slDLUsaasI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

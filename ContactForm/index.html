@@ -6,6 +6,7 @@
     <title>ContactForm - Cadastro</title>
     <link rel="shortcut icon" href="./IMAGES/download (11).jpeg" type="image/x-icon">
     <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/script.js"></script>
 </head>
 <body>  
     <header class="header">
@@ -68,7 +69,7 @@
                     </div>
 
                     <div class="contact-form__col-c">
-                        <input class="contact-form__input contact-form__input--tres-metades2" name="endereco7" id="cep" placeholder="CEP" type="text">
+                        <input class="contact-form__input contact-form__input--tres-metades2" name="endereco7" id="cep" placeholder="CEP" type="text" onblur="buscarEndereco(this.value)">
                         <input class="contact-form__input contact-form__input--metade2" name="endereco1" id="endereco" placeholder="Rua Lá de Casa" type="text">
                         <input class="contact-form__input contact-form__input--tres-metades2" name="endereco2" id="NR" placeholder="Ex: 555" type="text">
 
@@ -95,7 +96,7 @@
             </form>
 
             <article class="contact-button">
-                <button class="contact-button__cadastro" onclick="minhaFuncao()" type="submit">Cadastrar</button>
+                <button class="contact-button__cadastro" onclick="validarFormulario()" type="submit">Cadastrar</button>
                 <button class="contact-button__Limpar" type="reset">Limpar</button>
             </article>
 
@@ -103,146 +104,5 @@
 
     </main>
 </body> 
-
-<script>
-  function minhaFuncao(){
-  let nome = document.getElementById("nome").value.trim();
-  let sobrenome = document.getElementById("sobrenome").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let pais = document.getElementById("pais").value.trim();
-  let ddd = document.getElementById("ddd").value.trim();
-  let telefone = document.getElementById("telefone").value.trim();
-  let cep = document.getElementById("cep").value.trim();
-  let endereco = document.getElementById("endereco").value.trim();
-  let NR = document.getElementById("NR").value.trim();
-  let lugar = document.getElementById("lugar").value.trim();
-  let bairro = document.getElementById("bairro").value.trim();
-  let cidade = document.getElementById("cidade").value.trim();
-  let estado = document.getElementById("estado").value.trim();
-  let anotacoes = document.getElementById("anotacoes").value.trim();
-
-if(nome.length == 0){
-    formError("nome");
-}
-else{
-    reiniciaBorda("nome");
-}
-
-if(sobrenome.length == 0){
-    formError("sobrenome");
-}
-else{
-    reiniciaBorda("sobrenome");
-}
-
-if(email.length == 0){
-    formError("email");
-}
-else{
-    reiniciaBorda("email");
-}
-
-if(pais.length == 0){
-    formError("pais");
-}
-else{
-    reiniciaBorda("pais");
-}
-
-if(ddd.length == 0){
-    formError("ddd");
-}
-else{
-    reiniciaBorda("ddd");
-}
-
-if(telefone.length == 0){
-    formError("telefone");
-}
-else{
-    reiniciaBorda("telefone");
-}
-
-if(cep.length == 0){
-    formError("cep");
-}
-else{
-    reiniciaBorda("cep");
-}
-
-if(endereco.length == 0){
-    formError("endereco");
-}
-else{
-    reiniciaBorda("endereco");
-}
-
-if(NR.length == 0){
-    formError("NR");
-}
-else{
-    reiniciaBorda("NR");
-}
-
-if(lugar.length == 0){
-    formError("lugar");
-}
-else{
-    reiniciaBorda("lugar");
-}
-
-if(bairro.length == 0){
-    formError("bairro");
-}
-else{
-    reiniciaBorda("bairro");
-}
-
-if(cidade.length == 0){
-    formError("cidade");
-}
-else{
-    reiniciaBorda("cidade");
-}
-
-if(estado.length == 0){
-    formError("estado");
-}
-else{
-    reiniciaBorda("estado");
-}
-
-if(anotacoes.length == 0){
-    formError("anotacoes");
-}
-else{
-    reiniciaBorda("anotacoes");
-}
-
-  console.log(`
-  Nome: ${nome} ${sobrenome}  
-  Email: ${email} 
-  Pais: ${pais}
-  DDD: ${ddd}
-  Telefone: ${telefone}
-  CEP: ${cep}
-  Endereço: ${endereco}
-  Número da casa: ${NR}
-  Lugar: ${lugar}
-  Bairro: ${bairro}
-  Cidade: ${cidade}
-  Estado: ${estado}
-  Anotações: ${anotacoes}
- `); 
-}
-
-function formError(findId){
-    document.getElementById(findId).style.border = "1px solid red"
-    
-}
-function reiniciaBorda(findId){
-    document.getElementById(findId).style.border = "none"
-}
-</script>
 
 </html>
