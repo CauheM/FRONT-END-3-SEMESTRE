@@ -1,0 +1,11 @@
+{
+  "Usuarios": [
+    {
+      "Nome": "topgames",
+      "email": "top@bmail.com",
+      "idade": 68,
+      "id": "FUJPZ-Nasbs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

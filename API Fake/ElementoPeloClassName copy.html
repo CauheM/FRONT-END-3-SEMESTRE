@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" onblur="getElements(this.value)" placeholder="digite o nome da classe">
+    <button onclick="getElements()">Pegar Elementos</button>
+
+    <ul>
+        <li class="conrsim">item 1</li>
+        <li class="cornao">item 2</li>
+        <li class="conrsim">item 3</li>
+        <li class="cornao">item 4</li>
+        <li class="teste">Novo Item 1</li>
+        <li class="teste">Novo Item 2</li>
+        <li class="teste">Novo Item 3</li>
+        <li class="teste">Novo Item 4</li>
+    </ul>
+</body>
+<style>
+    body{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }       
+    .conrsim{
+        color: brown;
+    }
+    .cornao{
+        color: aqua;
+    }
+</style>
+ 
+ <script>
+      function getElements(nomeClasser1 = "cornao", nomeClasser2 = "conrsim"){
+        cornoes = document.getElementsByClassName(nomeClasser1);
+      
+
+       for(let i = 0; i <= cornoes.length; i++){
+        console.log(cornoes[i].textContent); 
+       }
+        
+      }
+      
+
+ </script>
+</html>
