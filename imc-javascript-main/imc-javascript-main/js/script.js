@@ -9,6 +9,15 @@ function calcular(){
         return false;
     }  
     
+    const IMC = calcularImc(altura, peso);
+    const TextoSituacao = gerarTextoImc(IMC);
+
+    console.log(nome);
+    console.log(altura);
+    console.log(peso);
+    console.log(IMC);
+    console.log(TextoSituacao);
+
 }
 
 function calcularImc(altura, peso){
