@@ -47,28 +47,7 @@
       "n2": 10,
       "operacao": "soma",
       "resultado": "20.00",
-      "id": "cmwR-GZ-9Ho"
-    },
-    {
-      "n1": 10,
-      "n2": 2,
-      "operacao": "subtracao",
-      "resultado": "8.00",
-      "id": "RvMgFy0Q2-k"
-    },
-    {
-      "n1": 10,
-      "n2": 20,
-      "operacao": "multiplicacao",
-      "resultado": "200.00",
-      "id": "d3dd6ONad_E"
-    },
-    {
-      "n1": 10,
-      "n2": 2,
-      "operacao": "divisao",
-      "resultado": "5.00",
-      "id": "-ymMM9ryAJo"
+      "id": "8RF-9QIwkTs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

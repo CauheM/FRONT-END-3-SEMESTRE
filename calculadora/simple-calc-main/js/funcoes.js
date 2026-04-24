@@ -6,8 +6,9 @@ function calcular() {
     let op = document.getElementById("operacao").value;//soma
     let resultado = null;
     
-    if( isNaN(n1) || isNaN(n2) ){
+    if( isNaN(n1) || isNaN(n2)){
         document.getElementById('resultado').innerText = 'Preencha todos os números!'
+        return false;
     }
 
 
@@ -35,6 +36,7 @@ function calcular() {
             
     } else {
         resultado = "Operação Inválida";
+        return false;
     }
 
     //saída
