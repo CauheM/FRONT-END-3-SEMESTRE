@@ -28,7 +28,7 @@
     
       cadastro.innerHTML += `
       <tr>
-      <td>${nome}</td>
+      <td>${nome}</td>4
       <td>${altura}</td>
       <td>${peso}</td>
       <td>${IMC.toFixed(2)}</td>
@@ -40,7 +40,7 @@
       document.getElementById("altura").value = "";
       document.getElementById("peso").value = " ";
 
-      alert(`${nome} foi cadastrado com sucesso `);
+      alert(`${nome} foi cadastrado com sucesso`);
 
   } else {
     alert("não foi possivel cadastrar");

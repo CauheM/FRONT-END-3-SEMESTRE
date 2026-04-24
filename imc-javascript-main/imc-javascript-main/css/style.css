@@ -102,7 +102,7 @@ table tbody tr:nth-child(odd) { background-color: white; }
 
 table tbody tr:nth-child(even) { background-color: #f6d6a8; }
 
-table tbody { text-align: center; }
+table tbody { text-align: center;}
 
 
 table td:first-of-type { text-align: left; }
