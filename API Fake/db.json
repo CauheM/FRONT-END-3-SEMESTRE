@@ -7,5 +7,39 @@
       "id": "FUJPZ-Nasbs"
     }
   ],
+  "CadastroIMC": [
+    {
+      "Nome": "Eduardo",
+      "Altura": 1.67,
+      "Peso": 85,
+      "Imc": 30.477966223242138,
+      "TextoSituacao": "Obesidade Grau I",
+      "id": "aOtTIttzGSw"
+    },
+    {
+      "Nome": "salgado",
+      "Altura": 1.75,
+      "Peso": 82,
+      "Imc": 26.775510204081634,
+      "TextoSituacao": "Sobrepeso",
+      "id": "QYdeRUFgpSs"
+    },
+    {
+      "Nome": "GOmes",
+      "Altura": 1.11,
+      "Peso": 122,
+      "Imc": 99.01793685577468,
+      "TextoSituacao": "Obesidade Grau III",
+      "id": "4WIJ87GOLAI"
+    },
+    {
+      "Nome": "darwin nunez",
+      "Altura": 1.9,
+      "Peso": 80,
+      "Imc": 22.1606648199446,
+      "TextoSituacao": "Saudavel",
+      "id": "n8LosIDIPNI"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
