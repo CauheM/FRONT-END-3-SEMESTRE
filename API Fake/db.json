@@ -169,6 +169,13 @@
       "operacao": "divisao",
       "resultado": "5.00",
       "id": "rJKV3S2f0ok"
+    },
+    {
+      "n1": 30,
+      "n2": 15,
+      "operacao": "divisao",
+      "resultado": "2.00",
+      "id": "sfwgzyZ2da0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

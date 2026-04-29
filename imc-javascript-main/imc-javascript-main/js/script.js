@@ -30,7 +30,7 @@
         document.getElementById("altura").value = "";
         document.getElementById("peso").value = " ";
 
-        alert(`${nome} foi cadastrado com sucesso `);
+        alert(`${nome} foi cadastrado com sucesso`);
 
     } else {
       alert("não foi possivel cadastrar");
