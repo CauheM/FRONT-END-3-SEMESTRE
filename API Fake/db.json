@@ -39,6 +39,14 @@
       "Imc": 22.1606648199446,
       "TextoSituacao": "Saudavel",
       "id": "n8LosIDIPNI"
+    },
+    {
+      "Nome": "cauhe",
+      "Altura": 212,
+      "Peso": 222,
+      "Imc": 0.004939480242079032,
+      "TextoSituacao": "Magreza Grave",
+      "id": "__wf44i-UE8"
     }
   ],
   "Calculadora": [
@@ -48,6 +56,20 @@
       "operacao": "soma",
       "resultado": "20.00",
       "id": "8RF-9QIwkTs"
+    },
+    {
+      "n1": 20,
+      "n2": 20,
+      "operacao": "subtracao",
+      "resultado": "0.00",
+      "id": "x6Xay_pqBWQ"
+    },
+    {
+      "n1": 30,
+      "n2": 30,
+      "operacao": "soma",
+      "resultado": "60.00",
+      "id": "JlUUuvIQ3e4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
