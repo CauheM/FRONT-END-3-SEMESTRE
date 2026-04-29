@@ -134,6 +134,41 @@
       "operacao": "soma",
       "resultado": "60.00",
       "id": "JlUUuvIQ3e4"
+    },
+    {
+      "n1": 10,
+      "n2": 10,
+      "operacao": "soma",
+      "resultado": "20.00",
+      "id": "R7WYeboxjGw"
+    },
+    {
+      "n1": 50,
+      "n2": 50,
+      "operacao": "subtracao",
+      "resultado": "0.00",
+      "id": "2FvCymavlkI"
+    },
+    {
+      "n1": 12,
+      "n2": 2,
+      "operacao": "multiplicacao",
+      "resultado": "24.00",
+      "id": "rXMkYKKhb_o"
+    },
+    {
+      "n1": 22,
+      "n2": 22,
+      "operacao": "multiplicacao",
+      "resultado": "484.00",
+      "id": "oSZt3wgisfY"
+    },
+    {
+      "n1": 10,
+      "n2": 2,
+      "operacao": "divisao",
+      "resultado": "5.00",
+      "id": "rJKV3S2f0ok"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

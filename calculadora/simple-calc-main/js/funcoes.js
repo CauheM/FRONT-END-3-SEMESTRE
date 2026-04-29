@@ -51,22 +51,17 @@ function calcular() {
     };
 
     const cadastrado = cadastrarApi(cadastroAPI);
-
-
-    const historico = document.getElementById("data");
     
-     historico.innerHTML += `
-    <article class="data__card-result">
-    <span><strong>Primeiro Número:</strong> ${n1}</span>
-     <span><strong>Segundo Número:</strong> ${n2}</span>
-     <span><strong>Operação:</strong> ${operacao.value}</span>
-    <span><strong>Resultado:</strong> ${resultado}</span>
-    </article>
-    `;
-
+    if (cadastrado) {
+     BuscarHis();
+        
     document.getElementById("n1").value = "";
     document.getElementById("n2").value = "";
     document.getElementById("op").value = "";
+    } 
+     else {
+    alert("não foi possivel registrar");
+    }
 }
 
 /**
@@ -121,7 +116,13 @@ async function BuscarHis() {
 
     console.log(dados);
 
+    dados.sort((a, b) => {
+      return a.operacao.localeCompare(b.operacao);
+      });
+
     const historico = document.getElementById("data");
+
+    historico.innerHTML = "";
     
      for (let i = 0; i < dados.length; i++) {
        
