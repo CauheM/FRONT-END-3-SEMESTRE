@@ -1,0 +1,19 @@
+.coisos{
+    background-color: rgb(255, 127, 127);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 70px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.coisos:hover{
+    width: 10%;
+    background-color: black;
+    color: #fff;
+}

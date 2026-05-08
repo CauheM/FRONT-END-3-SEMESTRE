@@ -1,5 +1,5 @@
 import'./Menu.css'
-import imagem from '../../src/assets/download (11).jpeg'
+import CardPerfil from '../cardperfil/CardPerfil'
 
 function Menu() {
 
@@ -10,11 +10,11 @@ function Menu() {
             <a href="#" className="menu__item">Contato</a>
             <a href="#" className="menu__item menu__item--signin">Entrar</a>
             <a href="#" className="menu__item menu__item--signup">Cadastrar</a>
-            <div className="card-perfil">
-           <img className="card-perfil__image" src={imagem} alt="imagem do usuario"/>
-            </div>
+
+            <CardPerfil/>
+            
         </nav>
   )
 }
 
-export default Menu;
+export default Menu
