@@ -1,4 +1,4 @@
-    function validarFormulario(){
++    function validarFormulario(){
     let nome = document.getElementById("nome").value.trim();
     let sobrenome = document.getElementById("sobrenome").value.trim();
     // let email = document.getElementById("email").value.trim();
