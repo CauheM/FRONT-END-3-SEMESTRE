@@ -1,5 +1,5 @@
 import "./produto.css"
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import img from '../../assets/WRvN2qv_JBk-MQ.jpg'
 
 export default function Produto() {
@@ -9,6 +9,7 @@ export default function Produto() {
     const [descricao, setDescricao] = useState("")
     const [quantidade, setQuantidade] = useState(0)
     const [imagem, setImagem] = useState(img)
+    const [Editar, SetEditar] = useState(false)
     const [arrProdutos, setArrProdutos] = useState([])
 
    function cadastrarProduto(e) {
@@ -36,7 +37,11 @@ export default function Produto() {
         }
 
          async function CadastrarAPI(obj) {
-        try {
+
+         //alert("cadastrar")
+         //return false
+
+        try {   
         const cadastro = await fetch ("http://localhost:3000/produtos", {
          method : "POST",
          body : JSON.stringify(obj),
@@ -86,7 +91,7 @@ export default function Produto() {
             })
             
             setArrProdutos(NovaLista)
-            
+
            }
            else{
 
@@ -101,23 +106,49 @@ export default function Produto() {
 
          }
 
+         async function EditarProduto(id){
+         //e.preventDefault()
+         try {
+            const cadastroPUT = await fetch (`http://localhost:3000/produtos/${id}`, {
+            method : "PUT",
+            });
+         
+            console.log(cadastroPUT)
+            if(cadastroPUT.status == 200){
+            const dados = cadastroPUT.json()
+            console.log(dados)
+            setArrProdutos(...arrProdutos, dados)
+            alert("Produto atualizado")
+            limparformulario()
+            }  
+            else{
+            alert("deu ruim")
+         }
+         } catch (e) {
+            console.log(e);
+            
+         }
+         }
+
     useEffect(() => {
         //chamar a api
-        async function getProdutos(){
-            try {
-                const retornoAPI = await fetch("http://localhost:3000/produtos")
-                const dados = await retornoAPI.json()
-                console.log(dados);
-                //inserir o 
-                setArrProdutos(dados)
-
-            } catch (error) {
-                console.log("Erro: " + error);
-                
-            }
-        }
         getProdutos()
     }, [])
+
+        async function getProdutos(){
+        try {
+            const retornoAPI = await fetch("http://localhost:3000/produtos")
+            const dados = await retornoAPI.json()
+            console.log(dados);
+            //inserir o 
+            setArrProdutos(dados)
+
+        } catch (error) {
+            console.log("Erro: " + error);
+                
+        }
+        }
+
 
     return (
         <>
@@ -126,19 +157,28 @@ export default function Produto() {
             <h1 className="titulo--vermelho">LOJA</h1>
             </header>
 
-            <form className="formzin" action="" onSubmit={cadastrarProduto}>
+            <form className="formzin" action="" onSubmit={(Editar) ? EditarProduto : cadastrarProduto}>
                 {/* <div className="inp ut--image">
                     <input className="input--metade" type="text" id="imagem" placeholder="Image" onChange={(e) => setProduto({ ...produto, imagem: e.target.value })} />
                 </div> */}
                 <div className="input--dados">
 
-                <input className="input--metade" type="text" id="nome" placeholder="Nome" onChange={(e) => setNome(e.target.value )} />
-                <input className="input--metade" type="number" id="preco" placeholder="Preço" onChange={(e) => setPreco(parseFloat(e.target.value))} />
-                <input className="input--metade" type="number" id="quantidade" placeholder="Quantidade" onChange={(e) => setQuantidade(parseInt(e.target.value))} />
-                <input className="input--metade" type="text" id="descricao" placeholder="Descrição" onChange={(e) => setDescricao(e.target.value )} />
+                <input className="input--metade" type="text" id="nome" placeholder="Nome" value={nome} onChange={(e) => setNome(e.target.value )} />
+                <input className="input--metade" type="number" id="preco" placeholder="Preço" value={preco} onChange={(e) => setPreco(parseFloat(e.target.value))} />
+                <input className="input--metade" type="number" id="quantidade" placeholder="Quantidade" value={quantidade} onChange={(e) => setQuantidade(parseInt(e.target.value))} />
+                <input className="input--metade" type="text" id="descricao" placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value )} />
                 </div>
+                 
+                {Editar && <button type="button" className="btn--cadastro" onClick={() => {
+                SetEditar(false)
+                limparformulario()
+                }}>Cancelar edição</button>}
+
+                {"     "}
 
                 <button type="submit" className="btn--cadastro">Adicionar Produto</button>
+                
+                
             </form>
 
         
@@ -154,6 +194,15 @@ export default function Produto() {
                             e.preventDefault()
                             deletar(prod.id)
                         }}>Apagar</a>
+                        <br />
+                        <a href="" onClick={(e)=>{
+                            e.preventDefault()
+                            SetEditar(true)
+                            setNome(prod.nome)
+                            setDescricao(prod.descricao)
+                            setPreco(prod.preco)
+                            setQuantidade(prod.quantidade)
+                        }}>Editar</a>
                     </div>
                 ))}
             </section>

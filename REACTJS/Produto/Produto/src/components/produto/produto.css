@@ -67,6 +67,7 @@ body{
     border-radius: 20px;
     cursor: pointer;
     padding: 10px;
+    
 }
 
 .produto:hover {
@@ -78,4 +79,12 @@ body{
     height: 300px;
     padding: 10px;
     border-radius: 10px;
+}
+
+.produto a{
+    text-decoration: none;
+}
+
+.Botao{
+    gap: 20px;
 }
