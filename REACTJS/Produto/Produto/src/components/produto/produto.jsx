@@ -188,7 +188,7 @@ export default function Produto() {
 
                 {/* condicional para mostrar o botão */}
                 {editar && <button type="button" className="btn--cancelar" onClick={() => {
-                    setEditar(false) //faz esconder o botão editar
+                    setEditar(false) //faz esconde  r o botão editar
                     limparForm()
                 }}>Cancelar</button>}
                 <button type="submit" className="btn--cadastro">{editar ? "Editar Produto" : "Adicionar Produto"}</button>
