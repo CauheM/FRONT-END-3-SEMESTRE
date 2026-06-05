@@ -249,7 +249,7 @@ const CadastroFilmes = (e) => {
                         
             />
 
-            <Lista
+            <Lista  
             tituloLista="Lista de Filmes"
             //visibilidade="none"
 
