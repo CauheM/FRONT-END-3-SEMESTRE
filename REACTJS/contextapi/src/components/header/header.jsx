@@ -6,6 +6,11 @@ const Header = ( ) => {
 
     const {usuario, setUsuario} = useContext(UsuarioContext)
 
+    const logout = () => {
+        setUsuario(null)
+        localStorage.removeItem("usuario")
+    }
+
     return(
         <header>
             <nav>
@@ -16,7 +21,7 @@ const Header = ( ) => {
                 <span>( {usuario} )</span>
                  <button onClick={
                   () => {
-                 setUsuario(null)
+                 logout()
             }
         }>Sair</button>
             </nav>

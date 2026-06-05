@@ -7,7 +7,14 @@ const Perfil = () => {
     //state local 
     const [novoUsuario, setNovoUsuario] = useState("")
 
-    return(
+    const login = () => {
+        setUsuario(novoUsuario)
+        setNovoUsuario("")
+
+        localStorage.setItem("usuario", JSON.stringify(novoUsuario))
+    }
+
+    return( 
         <div>
         <h2>Meu Perfil</h2>
         <span>Usuario cadastrado: {usuario}</span>
@@ -26,7 +33,7 @@ const Perfil = () => {
 
             <button onClick={
             () => {
-              setUsuario(novoUsuario)
+              login()
             }
         }>Entrar</button></p>
         </div>
