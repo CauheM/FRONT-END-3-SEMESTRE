@@ -10,7 +10,7 @@ const Perfil = () => {
     const login = () => {
         setUsuario(novoUsuario)
         setNovoUsuario("")
-
+        
         localStorage.setItem("usuario", JSON.stringify(novoUsuario))
     }
 

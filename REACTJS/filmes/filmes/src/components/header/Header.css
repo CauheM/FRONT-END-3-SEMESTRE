@@ -24,6 +24,20 @@ header{
     height: 60px;
 }
 
+.botao{
+    /* padding: 5px 100px; */
+    margin-left: 20px;
+    width: 60px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #73061B;
+    color: white;
+    border-radius: 6px;
+    /* Negrito */
+    font-weight: bolder;
+}
+
 .link_header{
     margin-left: 45px;
 
