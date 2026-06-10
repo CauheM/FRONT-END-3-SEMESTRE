@@ -1,9 +1,12 @@
 import "./Login.css";
 import Botao from "../../components/botao/Botao";
 import Logo from "../../assets/img/logo.svg"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UsuarioContext } from "../../context/UsuarioContext";
 import { useNavigate } from "react-router-dom";
+import { Alerta } from "../../components/alerta/Alerta";
+import { jwtDecode } from "jwt-decode";
+import api from "../../Services/services";
 
 const Login = () => {
     
@@ -13,17 +16,69 @@ const Login = () => {
 
     const[email, Setemail] = useState("")//email
 
-    const cadastro = (E) => {
+    const[senha, Setsenha] = useState("")
+
+    const cadastro = async (E) => {
         E.preventDefault()
 
-        setUsuario(email)
+        if(email.trim().length == 0 || senha.trim().length == 0){
+            Alerta({
+                title: "Login",
+                text: "preenche isso",
+                icon: "warning",
+                confirmButtonText: "Tá bom"
+            })
+            return false
+        }
+
+        const dadoslogin = {
+            email: email,
+            senha: senha
+        }
         
+        try {
 
-        localStorage.setItem("usuario", JSON.stringify(email))
-        Setemail("")
-        navigate("/generos")
+            const retornoAPI = await api.post("/Login", dadoslogin)  
 
+            console.log("API:")
+            console.log(retornoAPI.data)
+
+            const token = retornoAPI.data.token
+            const usuarioDecoded = jwtDecode(token)
+            console.log(usuarioDecoded)
+
+            setUsuario(usuarioDecoded)
+            localStorage.setItem("usuario", JSON.stringify(usuarioDecoded))
+            Setemail("")
+            Setsenha("")
+            navigate("/generos")
+
+
+        } catch (error) {
+            Alerta({
+                title: "Deu ruim",
+                text: "Api ou esse codigo seu tá ruim",
+                icon: "error",
+                confirmButtonText: "eu te odeio"
+            })
+        }
+        
     } 
+
+    const VerificarLogin = () => {
+       const logado = JSON.stringify(localStorage.getItem("usuario"))
+
+       if(logado != undefined || logado != null){
+          setUsuario(usuario)
+          navigate("/generos")
+         }
+    }
+
+    useEffect(() => {
+    VerificarLogin()
+    }, [])
+
+  
     
     return (    
         <>
@@ -40,7 +95,7 @@ const Login = () => {
                     </div>
                     <div className="campo_input">
                         <label htmlFor="senha">Senha:</label>
-                        <input type="password" name="senha" placeholder="Digite sua senha"/>
+                        <input type="password" value={senha} onChange={(e) => {Setsenha(e.target.value)}} name="senha" placeholder="Digite sua senha"/>
                     </div>
                 </div>
                 <Botao nomeDoBotao="Entrar" />

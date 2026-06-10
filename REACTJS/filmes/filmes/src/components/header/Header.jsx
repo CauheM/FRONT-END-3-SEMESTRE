@@ -17,7 +17,7 @@ const Header = () => {
         <header>
             <div className="layout_grid cabecalho">
                 {/* Ao clicar no link, redireciona para a tela login */}
-                <Link to="/">
+                <Link to="/" onClick={logout}>
                     <img src={Logo} alt="Logo do Filmoteca" />
                 </Link>
 
@@ -28,7 +28,7 @@ const Header = () => {
                      {"   "}
                      {"   "}
 
-                    <button className="botao" onClick={() => {
+                    <button className="botao1" onClick={() => {
                     logout()
                     }}>Sair</button>
                 </nav>
